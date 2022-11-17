@@ -1,0 +1,38 @@
+
+#include <iostream>
+using namespace std;
+#include<vector>
+int main()
+{
+	//THIS PORGRAM COMPARE VECTOR ELEMENTS AND SORT OF FROM SMALLER TO GTREATER
+	int a = 5;
+	int b = 4;
+	int c = 3;
+	int d = 2;
+	int e = 8;
+	int f = 6;
+	vector<int> k = { a, b, c, d, e, f }; // lets we say that we have a vector
+	for(int p=0;p<k.size();p++) { // WE CAN COMPARE ONLY CONSECUTİVE VECTOR ELEMENTS . 
+		//HENCE WE CAN MAKE LOOP FOR COMPARE EVERY NEW VECTOR WHİCH WE OBTAİN IN THE SECOND FOR LOOP. I thougth that our vector size is fine for first compare loop.
+
+	 for (int i = 0; i < 5; i++) { // COMPARE CONSECUTIVE ELEMENTS OF VECTOR
+		int m, n;//dummmy variable
+		m = k[i]; //k[0]=5 
+		n = k[i + 1];//k[1]=4
+		if (n > m) {// yes ıt ıs big . this if function changes k[0]=4 and k[1]=5
+			k[i] = m;
+			k[i+1] = n;
+
+		}
+		else {// if it is not it is stay same
+			k[i] = n;
+			k[i+1] = m;
+		}
+	 }
+
+	}
+	for (int l = 0; l < k.size(); l++) {// we write the k vectors in the screen
+
+	cout << k[l] << endl;
+     }
+}
